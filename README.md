@@ -95,8 +95,8 @@ Experiments and analyses show promising results in editing attributes, subjects,
 @article{vid2vid-zero,
   title={Zero-Shot Video Editing Using Off-The-Shelf Image Diffusion Models},
   author={Wang, Wen and Xie, kangyang and Liu, Zide and Chen, Hao and Cao, Yue and Wang, Xinlong and Shen, Chunhua},
-  journal={arXiv preprint arXiv:2212.02499},
-  year={2022}
+  journal={arXiv preprint arXiv:2303.xxxx},
+  year={2023}
 }
 ```
 
