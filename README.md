@@ -3,7 +3,7 @@
 
 <div align="center">
 
-<h1>vid2vid-zero</h1>
+<h1>vid2vid-zero for Zero-Shot Video Editing</h1>
 
 [Wen Wang](https://scholar.google.com/citations?user=1ks0R04AAAAJ&hl=zh-CN)<sup>1*</sup>, &nbsp; [Kangyang Xie](https://github.com/felix-ky)<sup>1*</sup>, &nbsp; [Zide Liu](https://github.com/zideliu)<sup>1*</sup>, &nbsp; [Hao Chen](https://scholar.google.com.au/citations?user=FaOqRpcAAAAJ&hl=en)<sup>1</sup>, &nbsp; [Yue Cao](http://yue-cao.me/)<sup>2</sup>, &nbsp; [Xinlong Wang](https://www.xloong.wang/)<sup>2</sup>, &nbsp; [Chunhua Shen](https://cshen.github.io/)<sup>1</sup>
 
@@ -26,6 +26,8 @@ Experiments and analyses show promising results in editing attributes, subjects,
 - Zero-shot video editing using off-the-shelf image diffusion models.
 
 - Training-free bi-directional temporal modeling at test time.
+
+- Promising results in editing attributes, subjects, places, etc., in real-world videos.
 
 ## Examples
 <table class="center">
@@ -87,11 +89,16 @@ Experiments and analyses show promising results in editing attributes, subjects,
 </table>
 
 
-<!-- ## Citation
+## Citation
 
 ```
-TODO
-``` -->
+@article{vid2vid-zero,
+  title={Zero-Shot Video Editing Using Off-The-Shelf Image Diffusion Models},
+  author={Wang, Wen and Xie, kangyang and Liu, Zide and Chen, Hao and Cao, Yue and Wang, Xinlong and Shen, Chunhua},
+  journal={arXiv preprint arXiv:2212.02499},
+  year={2022}
+}
+```
 
 ## Acknowledgement
 [Tune-A-Video](https://github.com/showlab/Tune-A-Video), [diffusers](https://github.com/huggingface/diffusers).
