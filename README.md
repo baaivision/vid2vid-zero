@@ -87,6 +87,15 @@ Experiments and analyses show promising results in editing attributes, subjects,
 </table>
 
 
+<!-- ## Citation
+
+```
+TODO
+``` -->
+
+## Acknowledgement
+[Tune-A-Video](https://github.com/showlab/Tune-A-Video), [diffusers](https://github.com/huggingface/diffusers).
+
 ## Contact
 
 **We are hiring** at all levels at BAAI Vision Team, including full-time researchers, engineers and interns. 
