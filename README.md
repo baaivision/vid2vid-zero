@@ -19,7 +19,7 @@
 We propose vid2vid-zero, a simple yet effective method for zero-shot video editing. Our vid2vid-zero leverages off-the-shelf image diffusion models, and doesn't require training on any video. At the core of our method is a null-text inversion module for text-to-video alignment, a cross-frame modeling module for temporal consistency, and a spatial regularization module for fidelity to the original video. Without any training, we leverage the dynamic nature of the attention mechanism to enable bi-directional temporal modeling at test time. 
 Experiments and analyses show promising results in editing attributes, subjects, places, etc., in real-world videos. 
 
-[[Paper]]()
+[[Paper]](https://arxiv.org/pdf/2303.17599.pdf)
 
 ## Hightlights
 
@@ -95,7 +95,7 @@ Experiments and analyses show promising results in editing attributes, subjects,
 @article{vid2vid-zero,
   title={Zero-Shot Video Editing Using Off-The-Shelf Image Diffusion Models},
   author={Wang, Wen and Xie, kangyang and Liu, Zide and Chen, Hao and Cao, Yue and Wang, Xinlong and Shen, Chunhua},
-  journal={arXiv preprint arXiv:2303.xxxx},
+  journal={arXiv preprint arXiv:2303.17599},
   year={2023}
 }
 ```
