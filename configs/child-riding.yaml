@@ -1,0 +1,40 @@
+
+pretrained_model_path: checkpoints/stable-diffusion-v1-4
+output_dir: outputs/child-riding
+
+input_data:
+  video_path: data/child-riding.mp4
+  prompt: "a child is riding a bike on the road"
+  n_sample_frames: 8
+  width: 512
+  height: 512
+  sample_start_idx: 0
+  sample_frame_rate: 1
+
+validation_data:
+  # inv_latent: "outputs_2d/car-turn/inv_latents/ddim_latent-0.pt"  # latent inversed w/o SCAttn ! 
+  prompts:
+    - a lego child is riding a bike on the road
+    - a child is riding a bike on the flooded road
+  video_length: 8
+  width: 512
+  height: 512
+  num_inference_steps: 50
+  guidance_scale: 7.5
+  num_inv_steps: 50
+  # args for null-text inv
+  use_null_inv: True
+  null_inner_steps: 1
+  null_base_lr: 1e-2
+  null_uncond_ratio: -0.5
+  null_normal_infer: True
+
+input_batch_size: 1
+seed: 33
+mixed_precision: "no"
+gradient_checkpointing: True
+enable_xformers_memory_efficient_attention: True
+# test-time adaptation
+use_sc_attn: True
+use_st_attn: True
+st_attn_idx: 0

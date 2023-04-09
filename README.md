@@ -5,6 +5,8 @@
 
 <h1>vid2vid-zero for Zero-Shot Video Editing</h1>
 
+<h3><a href="https://arxiv.org/abs/2303.17599">Zero-Shot Video Editing Using Off-The-Shelf Image Diffusion Models</a></h3>
+
 [Wen Wang](https://scholar.google.com/citations?user=1ks0R04AAAAJ&hl=zh-CN)<sup>1*</sup>, &nbsp; [Kangyang Xie](https://github.com/felix-ky)<sup>1*</sup>, &nbsp; [Zide Liu](https://github.com/zideliu)<sup>1*</sup>, &nbsp; [Hao Chen](https://scholar.google.com.au/citations?user=FaOqRpcAAAAJ&hl=en)<sup>1</sup>, &nbsp; [Yue Cao](http://yue-cao.me/)<sup>2</sup>, &nbsp; [Xinlong Wang](https://www.xloong.wang/)<sup>2</sup>, &nbsp; [Chunhua Shen](https://cshen.github.io/)<sup>1</sup>
 
 <sup>1</sup>[ZJU](https://www.zju.edu.cn/english/), &nbsp; <sup>2</sup>[BAAI](https://www.baai.ac.cn/english.html)
@@ -19,15 +21,42 @@
 We propose vid2vid-zero, a simple yet effective method for zero-shot video editing. Our vid2vid-zero leverages off-the-shelf image diffusion models, and doesn't require training on any video. At the core of our method is a null-text inversion module for text-to-video alignment, a cross-frame modeling module for temporal consistency, and a spatial regularization module for fidelity to the original video. Without any training, we leverage the dynamic nature of the attention mechanism to enable bi-directional temporal modeling at test time. 
 Experiments and analyses show promising results in editing attributes, subjects, places, etc., in real-world videos. 
 
-[[Paper]](https://arxiv.org/pdf/2303.17599.pdf)
 
-## Hightlights
+## Highlights
 
 - Video editing with off-the-shelf image diffusion models.
 
 - No training on any video.
 
 - Promising results in editing attributes, subjects, places, etc., in real-world videos.
+
+## News
+* [2023.4.9] Code released! 
+
+## Installation
+### Requirements
+
+```shell
+pip install -r requirements.txt
+```
+Installing [xformers](https://github.com/facebookresearch/xformers) is highly recommended for improved efficiency and speed on GPUs. 
+
+### Weights
+
+**[Stable Diffusion]** [Stable Diffusion](https://arxiv.org/abs/2112.10752) is a latent text-to-image diffusion model capable of generating photo-realistic images given any text input. The pre-trained Stable Diffusion models can be downloaded from Hugging Face (e.g., [Stable Diffusion v1-4](https://huggingface.co/CompVis/stable-diffusion-v1-4), [v2-1](https://huggingface.co/stabilityai/stable-diffusion-2-1)). We use Stable Diffusion v1-4 by default.
+
+## Zero-shot testing
+
+Simply run:
+
+```bash
+accelerate launch test_vid2vid_zero.py --config path/to/config
+```
+
+For example:
+```bash
+accelerate launch test_vid2vid_zero.py --config configs/car-moving.yaml
+```
 
 ## Examples
 <table class="center">
@@ -88,7 +117,6 @@ Experiments and analyses show promising results in editing attributes, subjects,
 </tr>
 </table>
 
-
 ## Citation
 
 ```
@@ -101,7 +129,7 @@ Experiments and analyses show promising results in editing attributes, subjects,
 ```
 
 ## Acknowledgement
-[Tune-A-Video](https://github.com/showlab/Tune-A-Video), [diffusers](https://github.com/huggingface/diffusers).
+[Tune-A-Video](https://github.com/showlab/Tune-A-Video), [diffusers](https://github.com/huggingface/diffusers), [prompt-to-prompt](https://github.com/google/prompt-to-prompt).
 
 ## Contact
 

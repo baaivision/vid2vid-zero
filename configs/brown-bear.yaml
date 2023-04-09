@@ -1,0 +1,37 @@
+pretrained_model_path: checkpoints/stable-diffusion-v1-4
+output_dir: outputs/brown-bear
+input_data:
+  video_path: data/brown-bear.mp4
+  prompt: a brown bear is sitting on the ground
+  n_sample_frames: 8
+  width: 512
+  height: 512
+  sample_start_idx: 0
+  sample_frame_rate: 1
+validation_data:
+  prompts:
+  - a brown bear is sitting on the grass
+  - a black bear is sitting on the grass
+  - a polar bear is sitting on the ground
+  video_length: 8
+  width: 512
+  height: 512
+  num_inference_steps: 50
+  guidance_scale: 7.5
+  num_inv_steps: 50
+  # args for null-text inv
+  use_null_inv: True
+  null_inner_steps: 1
+  null_base_lr: 1e-2
+  null_uncond_ratio: -0.5
+  null_normal_infer: True
+
+input_batch_size: 1
+seed: 33
+mixed_precision: "no"
+gradient_checkpointing: True
+enable_xformers_memory_efficient_attention: True
+# test-time adaptation
+use_sc_attn: True
+use_st_attn: True
+st_attn_idx: 0
