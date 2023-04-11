@@ -1,5 +1,6 @@
 import os
 import imageio
+import tempfile
 import numpy as np
 from PIL import Image
 from typing import Union
@@ -11,7 +12,7 @@ from tqdm import tqdm
 from einops import rearrange
 
 
-def save_videos_as_images(videos: torch.Tensor, path: str, rescale=False, n_rows=4, fps=8):
+def save_videos_as_images(videos: torch.Tensor, path: str, rescale=False, n_rows=4, fps=1):
     dir_name = os.path.dirname(path)
     videos = rearrange(videos, "b c t h w -> t b h w c")
 
@@ -29,7 +30,7 @@ def save_videos_as_images(videos: torch.Tensor, path: str, rescale=False, n_rows
             image.save(save_path)
 
 
-def save_videos_grid(videos: torch.Tensor, path: str, rescale=False, n_rows=4, fps=8):
+def save_videos_grid(videos: torch.Tensor, path: str, rescale=False, n_rows=4, fps=1):
     videos = rearrange(videos, "b c t h w -> t b c h w")
     outputs = []
     for x in videos:
@@ -41,7 +42,15 @@ def save_videos_grid(videos: torch.Tensor, path: str, rescale=False, n_rows=4, f
         outputs.append(x)
 
     os.makedirs(os.path.dirname(path), exist_ok=True)
-    imageio.mimsave(path, outputs, fps=fps)
+    imageio.mimsave(path, outputs, fps=8)
+
+    # save for gradio demo
+    out_file = tempfile.NamedTemporaryFile(suffix='.mp4', delete=False)
+    out_file.name = path.replace('.gif', '.mp4')
+    writer = imageio.get_writer(out_file.name, fps=fps)
+    for frame in outputs:
+        writer.append_data(frame)
+    writer.close()
 
 
 @torch.no_grad()

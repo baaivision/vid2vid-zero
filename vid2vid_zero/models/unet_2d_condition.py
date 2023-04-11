@@ -561,8 +561,6 @@ class UNet2DConditionModel(ModelMixin, ConfigMixin):
 
         # Load config if we don't provide a configuration
         config_path = pretrained_model_name_or_path
-        # TODO: for debug
-        config_path = pretrained_model_name_or_path = "checkpoints/stable-diffusion-v1-4/"
 
         # This variable will flag if we're loading a sharded checkpoint. In this case the archive file is just the
         # Load model

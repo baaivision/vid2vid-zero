@@ -31,6 +31,7 @@ Experiments and analyses show promising results in editing attributes, subjects,
 - Promising results in editing attributes, subjects, places, etc., in real-world videos.
 
 ## News
+* [2023.4.11] Add Gradio Demo (runs in local).
 * [2023.4.9] Code released! 
 
 ## Installation
@@ -57,6 +58,13 @@ For example:
 ```bash
 accelerate launch test_vid2vid_zero.py --config configs/car-moving.yaml
 ```
+
+## Gradio Demo
+Launch the local demo built with [gradio](https://gradio.app/):
+```bash
+python app.py
+```
+Note that we disable Null-text Inversion and enable fp16 for faster demo response.
 
 ## Examples
 <table class="center">
