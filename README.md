@@ -31,6 +31,7 @@ Experiments and analyses show promising results in editing attributes, subjects,
 - Promising results in editing attributes, subjects, places, etc., in real-world videos.
 
 ## News
+* [2023.4.12] Online Gradio Demo is available [here](https://huggingface.co/spaces/BAAI/vid2vid-zero) 
 * [2023.4.11] Add Gradio Demo (runs in local).
 * [2023.4.9] Code released! 
 
@@ -64,6 +65,9 @@ Launch the local demo built with [gradio](https://gradio.app/):
 ```bash
 python app.py
 ```
+
+Or you can use our online gradio demo [here](https://huggingface.co/spaces/BAAI/vid2vid-zero).
+
 Note that we disable Null-text Inversion and enable fp16 for faster demo response.
 
 ## Examples
