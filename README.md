@@ -12,7 +12,10 @@
 <sup>1</sup>[ZJU](https://www.zju.edu.cn/english/), &nbsp; <sup>2</sup>[BAAI](https://www.baai.ac.cn/english.html)
 
 <br>
-  
+
+[![Hugging Face Demo](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/BAAI/vid2vid-zero)
+
+
 <image src="docs/vid2vid-zero.png" />
 <br>
 
@@ -31,7 +34,7 @@ Experiments and analyses show promising results in editing attributes, subjects,
 - Promising results in editing attributes, subjects, places, etc., in real-world videos.
 
 ## News
-* [2023.4.12] Online Gradio Demo is available [here](https://huggingface.co/spaces/BAAI/vid2vid-zero) 
+* [2023.4.12] Online Gradio Demo is available [here](https://huggingface.co/spaces/BAAI/vid2vid-zero).
 * [2023.4.11] Add Gradio Demo (runs in local).
 * [2023.4.9] Code released! 
 
