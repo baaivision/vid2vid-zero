@@ -2,7 +2,7 @@
 checkpoints/
 outputs/
 
-# Initially taken from Github's Python gitignore file
+# Initially taken from Github's Python gitignore files
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
